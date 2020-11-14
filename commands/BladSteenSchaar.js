@@ -59,7 +59,7 @@ module.exports.run = async (client, message, args) => {
 
         }
 
-        if (args[0].toUpperCase() == "ARON") {
+       else if (args[0].toUpperCase() == "ARON") {
             console.log('Aron de secret hero is ingezet')
             if (result == "papier") {
     
