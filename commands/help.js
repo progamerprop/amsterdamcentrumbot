@@ -33,6 +33,7 @@ module.exports.run = async (client, message, args) => {
     var response = "**Bot commands**\n\n";
     var general = "**__Algemeen__**\n";
     var info = "\n**__Informatie__**\n";
+    var staff = "\n**_staff_**\n";
 
     for (let i = 0; i < commandList.length; i++) {
         const command = commandList[i];
@@ -45,7 +46,9 @@ module.exports.run = async (client, message, args) => {
 
             info += `${prefix}${command["name"]} - ${command["description"]}\n`;
 
-        }
+        } else if(command["category"] == "staff only"){
+
+            info += `${prefix}${command["name"]} - ${command["description"]}\n`;
 
     }
 
@@ -58,7 +61,7 @@ module.exports.run = async (client, message, args) => {
         message.channel.send("Je privé berichten staan uit dus je hebt niets ontvangen.");
     });
 
-}
+}}
 
 module.exports.help = {
     name: "help",

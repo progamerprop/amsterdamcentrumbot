@@ -57,12 +57,14 @@ module.exports.run = async (client, message, args) => {
 
         message.channel.send(embed);
 
-    } else if (warns[warnUser.id].warns == 4) {
+    } else if (warns[warnUser.id].warns == 8) {
         message.guild.member(warnUser).ban(reason);
         message.channel.send(`${warnUser} is verbannen door de bot wegens te veel warns`);
-    } else if (warns[warnUser.id].warns == 2) {
+        console.log({warnUser},'is gebanned van de server')
+    } else if (warns[warnUser.id].warns == 4) {
     message.guild.member(warnUser).kick(reason);
     message.channel.send(`${warnUser} is gekickt door de bot wegens te veel warns`);
+    console.log({warnUser},'is gekicked van de server')
 }
 }
 
