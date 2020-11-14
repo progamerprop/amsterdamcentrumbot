@@ -38,6 +38,10 @@ module.exports.run = async (client, message, args) => {
                         SEND_MESSAGES: false,
                         VIEW_CHANNEL: false
                     });
+                    settedParent.updateOverwrite(message.guild.roles.cache.find(x => x.name === '<@753988420971528282>'), {
+                        SEND_MESSAGES: false,
+                        VIEW_CHANNEL: false
+                    });
 
                     settedParent.updateOverwrite(message.author.id, {
                         CREATE_INSTANT_INVITE: false,
@@ -55,6 +59,7 @@ module.exports.run = async (client, message, args) => {
                         .setDescription("Zet hier je bericht / vraag");
 
                     settedParent.send(embedParent);
+                    message.send('<@753988420971528282>')
 
                 }
             ).catch(err => {
