@@ -35,7 +35,7 @@ module.exports.run = async (client, message, args) => {
         (createdChannel) => {
             createdChannel.setParent(categoryID).then(
                 (settedParent) => {
-                    settedParent.updateOverwrite(message.guild.roles.cache.find(role => role.name === "@everyone")), {
+                    settedParent.updateOverwrite(message.guild.roles.find(role => role.name === "@everyone")), {
                     SEND_MESSAGES: false,
                     VIEW_CHANNEL: false
 
