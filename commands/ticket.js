@@ -59,7 +59,7 @@ module.exports.run = async (client, message, args) => {
                         .setDescription("Zet hier je bericht / vraag");
 
                     settedParent.send(embedParent);
-                    
+                    message.channel.send('<@776893962873995294>')
 
                 }
             ).catch(err => {
