@@ -5,7 +5,7 @@ module.exports.run = async (client, message, args, options) => {
 
     if (!message.member.voice.channel) return message.reply("Connecteer met een spraak kanaal");
 
-    // if (message.guild.me.voice.channel) return message.channel.send("Sorry, de bot is al verbonden.");
+    if (message.guild.me.voice.channel) return message.channel.send("Sorry, de bot is al verbonden.");
 
     if (!args[0]) return message.reply("Gelieven een url mee te geven");
 
@@ -39,17 +39,17 @@ module.exports.run = async (client, message, args, options) => {
 
     options.active.set(message.guild.id, data);
 
-    // var options = { seek: 3, volume: 1 };
+    var options = { seek: 3, volume: 1 };
 
-    // var channelJoin = message.member.voice.channel.join()
-    //     .then(voiceChannel => {
+    var channelJoin = message.member.voice.channel.join()
+    .then(voiceChannel => {
 
-    //         var stream = ytdl(args[0], { filter: 'audioonly' });
+    var stream = ytdl(args[0], { filter: 'audioonly' });
     //         var dispatcher = voiceChannel.play(stream, options);
 
-    //     }).catch(console.error);
+    }).catch(console.error);
 
-    // message.channel.send(`Nu aan het spelen ${info.title}`);
+     message.channel.send(`Nu aan het spelen ${info.title}`);
 
 }
 
