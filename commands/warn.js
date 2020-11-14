@@ -41,7 +41,7 @@ module.exports.run = async (client, message, args) => {
         **Redenen: ** ${reason}`)
         .addField("Aantal warns", warns[warnUser.id].warns);
 
-    var channel = message.member.guild.channels.cache.get("498068972604882945");
+    var channel = message.member.guild.channels.cache.get("760924860666609734");
 
     if (!channel) return;
 
@@ -59,7 +59,10 @@ module.exports.run = async (client, message, args) => {
     } else if (warns[warnUser.id].warns == 4) {
         message.guild.member(warnUser).ban(reason);
         message.channel.send(`${warnUser} is verbannen door de bot wegens te veel warns`);
-    }
+    } else if (warns[warnUser.id].warns == 2) {
+    message.guild.member(warnUser).kick(reason);
+    message.channel.send(`${warnUser} is gekickt door de bot wegens te veel warns`);
+}
 }
 
 module.exports.help = {
