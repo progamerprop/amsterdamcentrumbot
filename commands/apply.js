@@ -163,7 +163,7 @@ module.exports.run = async (client, message, args) => {
 }
 
 module.exports.help = {
-    name: "sollicitatie",
+    name: "apply",
     description: "Geeft al de verschillende commands",
     category: "Informatie"
 }
