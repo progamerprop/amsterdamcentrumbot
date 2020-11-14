@@ -30,8 +30,9 @@ module.exports.run = async (client, message, args) => {
 
     fs.writeFile("./warnings.json", JSON.stringify(warns), (err) => {
         if (err) console.log(err);
+        return message.reply('Deze user is succesvol gewarned');
     });
-
+    
     var embed = new discord.MessageEmbed()
         .setColor("#ff0000")
         .setFooter(message.member.displayName, message.author.displayAvatarURL)
