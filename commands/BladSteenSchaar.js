@@ -59,6 +59,23 @@ module.exports.run = async (client, message, args) => {
 
         }
 
+        if (args[0].toUpperCase() == "ARON") {
+            console.log('Aron de secret hero is ingezet')
+            if (result == "papier") {
+    
+                return message.channel.send(`Ik heb ${result} :notepad_spiral:, Maar aron wint van alles XD`);
+    
+            } else if (result == "schaar") {
+    
+                return message.channel.send(`Ik heb ${result} :scissors:, Maar aron wint van alles XD`);
+    
+            } else if (result == "steen") {
+    
+                return message.channel.send(`Ik heb ${result} :moyai:, Maar aron wint van alles XD`);
+    
+            }}
+    
+
     }
 
 }
