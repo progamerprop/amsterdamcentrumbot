@@ -1,5 +1,5 @@
 const discord = require("discord.js");
-const prefix = $ 
+
 
 module.exports.run = async (client, message, args) => {
     var kleur = 0
