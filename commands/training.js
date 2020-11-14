@@ -1,9 +1,14 @@
 const discord = require("discord.js");
-
+const prefix = $ 
 
 module.exports.run = async (client, message, args) => {
     var kleur = 0
     var Dienst = 'Geen Dienst Gekozen'
+
+    if (message = {prefix},'training'); then 
+
+    if (!message.member.hasPermission("MANAGE MESSAGES")) return message.reply("sorry jij kan dit niet"); 
+     
 
     if (args(1) = '1') then
     (kleur = 1752220);
@@ -37,13 +42,13 @@ module.exports.run = async (client, message, args) => {
     (Dienst = 'Rijkswaterstaat');
 
     if (args(1) = '') then
-    message.reply('Vul 1 van deze nummers in als de dienst waar je training van wilt geven, 1 = politie, 2 = DSI, 3 = kmar, 4 = ambulance 5 = brandweer, 6 = KCT, 7 = RWS')
+    return message.reply('Vul 1 van deze nummers in als de dienst waar je training van wilt geven, 1 = politie, 2 = DSI, 3 = kmar, 4 = ambulance 5 = brandweer, 6 = KCT, 7 = RWS');
     if (args(2) = '') then
-    message.reply('Vul een tijd in')
+    return message.reply('Vul een tijd in')
     if (args(3) = '') then
-    message.reply('Vul een datum in')
+    return message.reply('Vul een datum in')
     if (args(4) = '') then
-    message.reply('Vul een opmerking in')
+    return message.reply('Vul een opmerking in')
 
 
 
@@ -60,6 +65,7 @@ module.exports.run = async (client, message, args) => {
         
       
 }
+
 
 
 
