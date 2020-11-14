@@ -1,6 +1,8 @@
 const discord = require("discord.js");
 const ytdl = require("ytdl-core");
 
+
+
 module.exports.run = async (client, message, args, options) => {
 
     if (!message.member.voice.channel) return message.reply("Connecteer met een spraak kanaal");
