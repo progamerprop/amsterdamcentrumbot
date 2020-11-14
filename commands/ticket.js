@@ -59,7 +59,7 @@ module.exports.run = async (client, message, args) => {
                         .setDescription("Zet hier je bericht / vraag");
 
                     settedParent.send(embedParent);
-                    message.send('<@753988420971528282>')
+                    
 
                 }
             ).catch(err => {
