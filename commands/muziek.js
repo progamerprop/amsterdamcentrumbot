@@ -11,14 +11,16 @@ module.exports.run = async (client, message, args) => {
           // Only try to join the sender's voice channel if they are in one themselves
           if (message.member.voice.channel) {
             const connection = await message.member.voice.channel.join();
+
+             // Play a ReadableStream
+     connection.play(ytdl(args[0], { quality: 'highestaudio' }));
+
           } else {
             message.reply('You need to join a voice channel first!');
           }
         }
       });
-      // Play a ReadableStream
-     connection.play(ytdl(args[0], { quality: 'highestaudio' }));
-
+     
 }
 
 module.exports.help = {
