@@ -15,7 +15,7 @@ module.exports.run = async (client, message, args) => {
             })
         }
         async run(msg) {
-            let vc = msg.guild.channels.find(ch => ch.name.toLowerCase() === 'music' && ch.type === 'voice');
+            let vc = msg.guild.channels.find(ch => ch.name.toLowerCase() === 'muziek' && ch.type === 'voice');
             if(vc && !vc.connection) {
                 await vc.join();
             }
