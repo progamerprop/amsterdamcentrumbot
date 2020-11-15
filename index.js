@@ -197,7 +197,7 @@ client.on("message", async message => {
 
         message.delete();
         message.channel.send(senteceUser);
-        message.channel.send("Niet vloeken a.u.b.");
+        message.channel.send(`Schelden kan resulteren in een warn ${message.author.username}`);
     }
 
 
