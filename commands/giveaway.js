@@ -7,22 +7,12 @@ module.exports.run = async (client, message, args) => {
     var item = "";
     var time;
     var winnerCount;
-    var sponsor = args[3];
-
-    if (sponsor = " ") then
-    sponsor = "Voor deze giveaway is er geen sponsor"; 
-
 
     if (!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("Sorry jij kan dit niet doen");
 
     winnerCount = args[0];
     time = args[1];
     item = args.splice(2, args.length).join(" ");
-    sponsor = args.splice(3, args.length).join(" ");
-
-
-    if (sponsor = " ") then
-    sponsor = "Voor deze giveaway is er geen sponsor"; 
 
     if (!winnerCount) return message.reply("Geen aantal spelers opgegeven");
     if (!time) return message.reply("Geen tijd opgegeven");
@@ -35,8 +25,6 @@ module.exports.run = async (client, message, args) => {
 
     var giveawayEmbed = new discord.MessageEmbed()
         .setTitle("🎉 **GIVEAWAY** 🎉")
-        .addField(`Giveaway gemaakt door: ${message.author.username}`)
-        .addDiscription(`Deze giveaway wordt gesponsored door: ${sponsor}`)
         .setFooter(`Vervalt: ${dateEnd}`)
         .setDescription(item);
 
@@ -92,7 +80,7 @@ module.exports.run = async (client, message, args) => {
 
         for (let y = 0; y < winners.length; y++) {
 
-            message.channel.send("Proficiat: " + winners[y].username + ` Je hebt gewonnen ${item}`);
+            message.channel.send("Proficiat: " + winners[y].username + `Je hebt gewonnen ${item}`);
 
         }
 
