@@ -175,7 +175,7 @@ client.on("message", async message => {
 
         for (let i = 0; i < swearWords["vloekwoorden"].length; i++) {
 
-            if (word.includes(swearWords["vloekwoorden"][i])) {
+            if (word === (swearWords["vloekwoorden"][i])) {
 
                 changeWord = word.replace(swearWords["vloekwoorden"][i], "******");
 
