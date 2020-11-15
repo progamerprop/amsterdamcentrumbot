@@ -104,24 +104,6 @@ client.on("guildMemberRemove", member => {
 
 });
 
-const commando = require('discord.js-commando');
-const path = require('path');
-//const config = require(path.join(__dirname, 'config', 'config.json'))
-const client = new commando.CommandoClient({
-    owner: process.env.ownerId,
-    commandPrefix: process.env.prefix
-});
-
-client.registry.registerGroups([
-    ['mod', 'mod commands'],
-    ['misc', 'misc commands'],
-    ['roles', 'roles commands'],
-    ['music', 'music bot commands']
-]).registerDefaults()
-.registerCommandsIn(path.join(__dirname, 'commands'));
-
-
-
 
 
 client.on("ready", async () => {
