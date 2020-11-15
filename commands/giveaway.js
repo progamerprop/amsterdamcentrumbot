@@ -25,6 +25,7 @@ module.exports.run = async (client, message, args) => {
 
     var giveawayEmbed = new discord.MessageEmbed()
         .setTitle("🎉 **GIVEAWAY** 🎉")
+        .addField(`Giveaway gemaakt door: ${message.author.username}`)
         .setFooter(`Vervalt: ${dateEnd}`)
         .setDescription(item);
 
@@ -49,11 +50,11 @@ module.exports.run = async (client, message, args) => {
         }
 
         if (peopleReacted.length == 0) {
-            return message.channel.send("Niemand heeft gewonnen dus de bot wint.");
+            return message.channel.send("Niemand heeft gewonnen dus niemand wint.");
         }
 
         if (peopleReacted.length < winnerCount) {
-            return message.channel.send("Er zijn te weinig mensen die mee deden daarom heeft de bot gewonnen.");
+            return message.channel.send("Er zijn te weinig mensen die mee deden daarom heeft de niemand gewonnen.");
         }
 
         for (let y = 0; y < winnerCount; y++) {
@@ -80,7 +81,7 @@ module.exports.run = async (client, message, args) => {
 
         for (let y = 0; y < winners.length; y++) {
 
-            message.channel.send("Proficiat: " + winners[y].username + `Je hebt gewonnen ${item}`);
+            message.channel.send("Proficiat: " + winners[y].username + ` Je hebt gewonnen ${item}`);
 
         }
 
